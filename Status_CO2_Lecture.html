@@ -1,0 +1,348 @@
+<!-- 	Template Authors: Stefan Lang, Eva Missoni - PLUS 
+		Template Creation Date: March-June 2020 
+		
+		IMPORTANT NOTICES FOR USERS/AUTHORS:  
+		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
+<!--	THE COMMANDS <section> and </section>  EMBRACE THE CONTENT FOR EACH SINGLE SLIDE.
+		ALTERNATIVELY, YOU CAN USE MARKDOWN NOTATION TO CREATE YOUR SLIDES. More information: https://github.com/webpro/reveal-md 
+		-->
+		
+		
+<!doctype html>
+<html lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		 
+		<title>CO2 budgets for municipalities - An introduction</title>
+		
+	<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) -->	
+		<meta property="dc:title" content="CO2 budgets for municipalities - An introduction" />
+		<meta property="dc:creator" content="Anders Östman" /> 
+		<meta property="dc:publisher" content="Novogit AB" /> 
+		<! meta property="dc:subject" content="Copernicus, EO4GEO, WP5, Satellite, Earth Observation" />
+		<! meta property="dc:abstract" content="This is a template slideset for EO4GEO Partners to familiarize with EO4GEO, introducing the idea of Copernicus and its services. Nevertheless, content-generation is not the prime concern of the template" />
+		<! meta property="dc:tableOfContents" content="(1) What is EO?; 
+							     (2) Benefits of Copernicus; 
+							     (3) Integration of Jupyter Notebooks; 
+							     (4) Integration of Youtube Video; 
+							     (5) Integration of H5P; 
+							     (6) Copernicus Services; 
+							     (7) Reference list; />
+		<! meta property="dc:description" content="Learning outcomes: Understand remote sensing workflow including image acquisition, (pixel-based) image analysis, classification and validation; get to know online portals, data catalogues, and pricing schemes for satellite data; Familiarize with the European Copernicus Earth observation programme; Master standard image analysis routines as implemented in ArcGIS Pro" /> 
+		<! meta property="dc:contributor" content="Barbara Hofer" />
+		<! meta property="dc:contributor" content="Eva Missoni" />
+		<! meta property="dc:created" content="2020-06-20" />
+		<meta property="dc:type" content="teaching material" /> 
+		<meta property="dc:format" content="html" />
+		<meta property="dc:language" content="EN" />
+		<! meta property="dc:SizeOrDuration" content="45min" />
+		<meta property="dc:audience" content="urban planners, GIS engineers" />
+		<meta property="dc:educationLevel" content="EQF 3" />
+		<!meta property="dc:source” content="Existing youtube-video on Copernicus Climate Change Service; existing Jupyter Notebook on "Well switching in Bangladesh" />
+		<meta property="dc:rightsHolder" content="Anders Östman" />
+		<meta property="dc:license" content="https://creativecommons.org/licenses/by-sa/4.0/deed.en" />
+
+		<! link rel="dc:relation" href="eo4geo:IP1-3-2" />
+		<! link rel="dc:relation" href="eo4geo:IP1-7" />
+		<! link rel="dc:relation" href="eo4geo:IP1" />	
+		<! link rel="dc:relation" href="eo4geo:IP3-4" />
+		<! link rel="dc:relation" href="eo4geo:IP4-2-1" />
+
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
+		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
+		<link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css">
+		<! link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme">  <!-- anthrazit background design --> 
+		<!-- EO4GEO FONT ROBOTO SLAB -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
+		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
+		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
+
+    		<base target="_blank"> <!-- All links in the presentation are opened in a seperate tab"-->
+ 
+	</head>
+
+	<body>
+		  
+		<div class="reveal" >
+		
+		<!-- FORMATTING FOR HEADER -->
+			
+					
+		<div class = "eo4geologo" style="width: 11%;height : 11%" ></div>				
+		<div class = "partnerlogo" style="width: 15%;height : 6%" ></div>		
+		<div  class = "presentation_title" style=" text-align: center " >CO2 budgets for municipalities - An introduction</div>	<!--The title of the presentation appears on each slide-->
+		<div class="slides">
+<!-- 	URL to the image hosting web page: https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets , instead of resources/	---> 				
+			
+				
+
+		<!-- What is a CO2 budget? --> 
+
+		<section class="scrollable"> <br>
+			<h1>Lecture 1: Current status of CO2 emissions</h1> 
+			<h2>Learning objectives</h2> <br> <br>
+			<p>At the end of this lecture, you are expected to be able to</p> <br>
+			<ul>
+				<li style="color:#337acc;">Explain what a CO2 budget is</li>
+				<li style="color:#337acc;">Describe the basic content of a CO2 budget</li>
+				<li style="color:#337acc;">Describe how CO2 budgets may be used</li>
+			</ul> <br>
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/Learning objectives.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>				
+
+
+		<section class="scrollable"> <br>
+			<h1>First some basic concepts</h1> 
+			<br> <br>
+			<ul>
+				<li>A CO2 budget (carbon budget) is the upper limit of CO2 emissions in order to remain below a specific average global temperature</li>
+				<li>The global CO2 budget can be split in space and time</li>
+				<li>Please note that CO2 emissions are to a great extent accumulated in the atmosphere. This means that overspending one year has to be compensated the following years</li> 
+				<li>CO2 budgets are considered to be an attractive analytical tool for a wide range of climate change analysis</li>
+				<li>Greenhouse gas emissions are usually expressed in CO2 equivalents</li>
+				<li>1 kg carbon (C) = 3.664 kg carbon dioxide (CO2)</li>
+			</ul> <br>
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/Conversion.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable"> <br>
+			<h2>Anthropogenic perturbation of the global carbon cycle</h2> 
+			<br>
+			<br><img width="900" height="375" data-src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/CO2Basic/L1-Pertubation.png"><br>						
+			<small> <a href="www.globalcarbonproject.org/carbonbudget">Source: Global Carbon Project (2019).</a></small>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/Carbon Cycle.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable"> <br>
+			<h2>Scenarios</h2> 
+			<br><p>The bold lines are scenarios that will be analysed in CMIP6 and the results assessed in the IPCC AR6 process.</p>
+			<br><img width="900" height="375" data-src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/CO2Basic/L1-Scenarios.png"><br>						
+			<small> <a href="www.globalcarbonproject.org/carbonbudget">Source: Global Carbon Project (2019) </a></small> 
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/Scenarios.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable"> <br>
+			<h2>Top emitters: Fossil CO2 Emissions</h2> 
+			<br><img width="900" height="375" data-src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/CO2Basic/L1-TopEmitters.png"><br>						
+			<small> <a href="www.globalcarbonproject.org/carbonbudget">Source: Global Carbon Project (2019) </a></small>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/Top Emitters.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable"> <br>
+			<h1>Content of a CO2 budget</h1> 
+			<ul>
+				<li>Curren status</li>
+				<ul>
+					<li>Emissions, goals and targets</li>
+				</ul>
+				<li>Pathways to net zero emissions</li>
+				<ul>
+					<li>Sector pathways, sectoral goals, KPI</li>
+				</ul>
+				<li>Monitoring</li>
+				<li>Around 13 % of the Swedish municipalities have established CO2 budgets. Additional 25 % have started their preparations</li>
+			</ul>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/CO2 Budget Content.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+	
+		<section class="scrollable"> <br>
+			<h1>Reporting of CO2 emissions</h1> 
+			<br> <h2>UN framework convention on climate change (UNFCCC)</h2> <br>
+			<ul>
+				<li>The united nations entity supporting the global response to climate change</li>
+				<li>Has nearly universal membership (197 parties)</li>
+				<li>Is the parent treaty of the 2015 Paris agreement, and the parent treaty of the 1997 Kyoto protocol and its Doha amendment, adopted in 2012.</li>
+				<li>EU member states reports yearly emissions to UNFCCC. Sectoral data according to the IPCC classification are also delivered</li>
+			</ul>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/UNFCCC.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable"> <br>
+			<h1>EEA Greenhouse Gas – Data Viewer</h1> 
+			<br> <br>
+			<a href="https://www.eea.europa.eu/data-and-maps/data/data-viewers/greenhouse-gases-viewer">Link to EEA Greenhouse Gas Data Viewer</a>
+			<br> <br>
+			<ul>
+				<li>You can download data in excel format for</li>
+				<ul>
+					<li>Year 1990 – 2019</li>
+					<li>Single or multiple countries</li>
+					<li>IPCC sectors</li>
+					<li>Aggregated sectors</li>
+					<li>Different GHG (Greenhouse gases)</li>
+				</ul>
+				<li>Good to know</li>
+				<ul>
+					<li>LULUCF (Land Use, Land Use Change and Forestry)</li>
+					<li>Negative values = Carbon sink</li>
+				</ul>
+			</ul>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/CO2 Europe.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+					 		
+
+		<section class="scrollable"> <br>
+			<h1>EU targets</h1> 
+			<br> <br>
+			<ul>
+				<li>2020 climate and energy package, from 2007</li>
+				<ul>
+					<li>By 2020, 20% cut in greenhouse gas emissions (from 1990 levels)</li>
+					<li><a href="https://ec.europa.eu/clima/policies/strategies/2020_en">https://ec.europa.eu/clima/policies/strategies/2020_en</a></li>
+				</ul>
+				<li>2030 climate and energy framework</li>
+				<ul>
+					<li>By 2030, at least 40% cuts in greenhouse gas emissions (from 1990 levels)</li>
+					<li><a href="https://ec.europa.eu/clima/policies/strategies/2030_en">https://ec.europa.eu/clima/policies/strategies/2030_en</a></li>
+				</ul>
+				<li>2050 long term strategy</li>
+				<ul>
+					<li>The EU aims to be climate-neutral by 2050 – an economy with net-zero greenhouse gas emissions</li>
+					<li><a href="https://ec.europa.eu/clima/policies/strategies/2050_en">https://ec.europa.eu/clima/policies/strategies/2050_en</a></li>
+				</ul>
+			</ul>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/EU targets.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable"> <br>
+			<h1>Fixed percentage annual reduction</h1> 
+			<br> <br>
+			<ul>
+				<li>We have actual emission values for the period 1990 – 2018 and emission goals for 2020, 2030 and 2050.</li>
+				<li>We need a goal model specifying the annual change in emissions in order to reach the overall emission goals. One simple goal model is to assume a fixed annual reduction in percent. This model may be formulated as </li> <br>
+			</ul>
+			<br><img width="640" height="360" data-src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/CO2Basic/Formulas.png"><br>	
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/EU target graph.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<br><h1>EU27 emission graphs with targets</h1> 
+			<br> <br>
+			<br><img data-src="./resources/L1 - EU27 CO2 Status.jpg"><br>	
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/EU27 graph.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Swedish targets (2017)</h1> 
+			<br> <br>
+			<ul>
+				<li>By 2020, 40% cut in greenhouse gas emissions (from 1990 levels)</li>
+				<li>By 2030, 63% cut in greenhouse gas emissions (from 1990 levels)</li>
+				<li>By 2040, 75% cut in greenhouse gas emissions (from 1990 levels)</li>
+				<li>By 2045, 85% cut in greenhouse gas emissions (from 1990 levels)</li>
+			</ul>
+			<br><img data-src="./resources/L1 - Sweden CO2 Status.jpg"><br>	
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/SE targets.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable"> <br>
+			<h1>Local Emission Data</h1> 
+			<br> <br>
+			<ul>
+				<li><a href="http://extra.lansstyrelsen.se/rus/Sv/statistik-och-data/nationell-emissionsdatabas/Pages/default.aspx">Swedish Emission Database</a></li>
+				<li>Statistics can be presented as maps (km2 grid), diagrams (national and county levels) and spreadsheets (national, county and municipal levels)</li>
+				<li>I have not investigated where to find local emission data for other countries</li>
+			</ul>
+			<br><img data-src="./resources/L1 - Nyköping CO2 Status.jpg"><br>
+	
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L1 - Current Status/CO2 Nyköping.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+				
+				
+		<!-- AUTHORS: CREATE YOUR LIST OF REFERENCES HERE: -->
+				
+				
+		<section>Slide show ends</section>
+			
+                </section>
+
+              </div>
+
+
+		<script src="internal_restricted/v1.0/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './internal_restricted/v1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './internal_restricted/v1.0/plugin/notes/notes.js' },{ src: 'socket.io/socket.io.js', async: true },
+					{ src: './internal_restricted/v1.0/plugin/notes-server/client.js', async: true }
+					
+				]
+			});
+
+		</script>
+		
+		<!-- rauslöschen?? -->
+		<script>Reveal.initialize({
+			simplemenu: {
+				menuselector: '.menu a'
+			},
+			dependencies: [
+				{ src: './internal_restricted/v1.0/plugin/markdown/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false } 
+			]
+			});
+		</script>
+
+	</body>
+</html>

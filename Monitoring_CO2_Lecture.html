@@ -1,0 +1,421 @@
+<!-- 	Template Authors: Stefan Lang, Eva Missoni - PLUS 
+		Template Creation Date: March-June 2020 
+		
+		IMPORTANT NOTICES FOR USERS/AUTHORS:  
+		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
+<!--	THE COMMANDS <section> and </section>  EMBRACE THE CONTENT FOR EACH SINGLE SLIDE.
+		ALTERNATIVELY, YOU CAN USE MARKDOWN NOTATION TO CREATE YOUR SLIDES. More information: https://github.com/webpro/reveal-md 
+		-->
+		
+		
+<!doctype html>
+<html lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		 
+		<title>Monitoring CO2 emissions</title>
+		
+	<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) -->	
+		<meta property="dc:title" content="CO2 budgets for municipalities - An introduction" />
+		<meta property="dc:creator" content="Anders Östman" /> 
+		<meta property="dc:publisher" content="Novogit AB" /> 
+		<! meta property="dc:subject" content="Copernicus, EO4GEO, WP5, Satellite, Earth Observation" />
+		<! meta property="dc:abstract" content="This is a template slideset for EO4GEO Partners to familiarize with EO4GEO, introducing the idea of Copernicus and its services. Nevertheless, content-generation is not the prime concern of the template" />
+		<! meta property="dc:tableOfContents" content="(1) What is EO?; 
+							     (2) Benefits of Copernicus; 
+							     (3) Integration of Jupyter Notebooks; 
+							     (4) Integration of Youtube Video; 
+							     (5) Integration of H5P; 
+							     (6) Copernicus Services; 
+							     (7) Reference list; />
+		<! meta property="dc:description" content="Learning outcomes: Understand remote sensing workflow including image acquisition, (pixel-based) image analysis, classification and validation; get to know online portals, data catalogues, and pricing schemes for satellite data; Familiarize with the European Copernicus Earth observation programme; Master standard image analysis routines as implemented in ArcGIS Pro" /> 
+		<! meta property="dc:contributor" content="Barbara Hofer" />
+		<! meta property="dc:contributor" content="Eva Missoni" />
+		<! meta property="dc:created" content="2020-06-20" />
+		<meta property="dc:type" content="teaching material" /> 
+		<meta property="dc:format" content="html" />
+		<meta property="dc:language" content="EN" />
+		<! meta property="dc:SizeOrDuration" content="45min" />
+		<meta property="dc:audience" content="urban planners, GIS engineers" />
+		<meta property="dc:educationLevel" content="EQF 3" />
+		<!meta property="dc:source” content="Existing youtube-video on Copernicus Climate Change Service; existing Jupyter Notebook on "Well switching in Bangladesh" />
+		<meta property="dc:rightsHolder" content="Anders Östman" />
+		<meta property="dc:license" content="https://creativecommons.org/licenses/by-sa/4.0/deed.en" />
+
+		<! link rel="dc:relation" href="eo4geo:IP1-3-2" />
+		<! link rel="dc:relation" href="eo4geo:IP1-7" />
+		<! link rel="dc:relation" href="eo4geo:IP1" />	
+		<! link rel="dc:relation" href="eo4geo:IP3-4" />
+		<! link rel="dc:relation" href="eo4geo:IP4-2-1" />
+
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
+		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
+		<link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css">
+		<! link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme">  <!-- anthrazit background design --> 
+		<!-- EO4GEO FONT ROBOTO SLAB -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
+		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
+		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
+
+    		<base target="_blank"> <!-- All links in the presentation are opened in a seperate tab"-->
+ 
+	</head>
+
+	<body>
+		  
+		<div class="reveal" >
+		
+		<!-- FORMATTING FOR HEADER -->
+			
+					
+		<div class = "eo4geologo" style="width: 11%;height : 11%" ></div>				
+		<div class = "partnerlogo" style="width: 15%;height : 6%" ></div>		
+		<div  class = "presentation_title" style=" text-align: center " >Monitoring CO2 emissions</div>	<!--The title of the presentation appears on each slide-->
+		<div class="slides">
+<!-- 	URL to the image hosting web page: https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets , instead of resources/	---> 				
+			
+		<!-- INTRODUCTION TO THE COURSE --> 
+
+		<section id="Introduction">
+			<h1>Monitoring CO2 emissions</h1>
+			Please switch on your audio equipment and play the audios on each slide
+			<br>You have to start each audio clip manually <br><br>
+
+<!--			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/Introduction/Welcome.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+-->			
+			<aside class="notes">
+				Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+			</aside>
+		</section>
+				
+
+		<section class="scrollable">
+			<h1>Lecture 3: Monitoring CO2 emissions</h1> 
+			<h2>Learning objectives</h2> <br> <br>
+			<p>At the end of this lecture, you are expected to be able to</p> <br>
+			<ul>
+				<li style="color:#337acc;">Describe data sources for monitoring of CO2 emissions and content</li>
+				<li style="color:#337acc;">Describe data sources of related sectors (air quality, traffic, ...)</li>
+				<li style="color:#337acc;">Explain pro's and con's of Copernicus Climate Change Services</li>
+				<li style="color:#337acc;">Explain basic principles of forecasting</li>
+			</ul>
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Learning Objectives.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>	
+		</section>				
+
+		<section class="scrollable">
+			<h1>Why monitoring CO2 emissions?</h1> 
+			<ul>
+				<li>Target group(s) / message</li>
+				<ul>
+					<li>Politicians / Effect of policy decisions</li> 
+					<li>Politicians / Evaluate efficiency and effectiveness of investments</li>
+					<li>Researchers / Indicate impact of actions (verify impact models or C/B models)</li>
+					<li>General public / Contribute to a factual and broad public debate</li>
+					<li>Schools / Teaching</li>
+					<li>Monitoring should, if possible, be based on open statistical records</li>
+				</ul>
+				<br> <li>Quality criteria: Frequency, accuracy, relevance</li>
+			</ul>
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Why monitoring.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>	
+		</section>		
+
+		<section class="scrollable">
+			<h1>Global monitoring of CO2 emissions?</h1> 
+			<br><img width="384" height="256" data-src="https://www.globalwomennet.org/wp-content/uploads/2019/07/unfccc-768x512.png"><br>						
+			<small> <a href="https://www.Ipcc-nggip.Iges.Or.Jp/public/2006gl/ ">IPCC guidelines for national greenhouse gas inventories</a></small>
+			
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/UNFCCC monitoring.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Update of UNFCCC statistics</h1> 
+			<br>
+			<img data-src="./resources/L3 - UNFCCC monitoring.jpg">
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/UNFCCC update.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>CO2 emissions 2019</h1> 
+			<ul>
+				<li>The European statistics for 2019 published in late May 2021</li>
+				<ul>
+					<li>The target for 2019 was a 0.5 % reduction down to 3905 Tg CO2</li> 
+					<li>The reported reduction is 4.0 %, down to 3610 Tg CO2</li>
+				</ul>
+				<li>The national statistics for Sweden is reported in December each year</li>
+				<ul>
+					<li>The target for 2019 was a 7.8 % reduction down to 47.2 Tg CO2</li> 
+					<li>The reported reduction is 2.4 %, down to 50.9 Tg CO2</li>
+					<li>Possible actions identified for each emission type, for instance</li>
+					<ul>
+						<li>Transport: Other fuels, public transports, unstudded winter tyres, newer vehicles, …</li> 
+						<li>Agriculture: Manure, usage of fertilizers, forage additives</li>
+					</ul>
+				</ul>
+				<br> <li>Local data for 2019 to be published in July 2021</li>
+			</ul> <br>
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Emission reporting.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>How to find data?</h1> 
+			<ul>
+				<li>We have several different portals, aimed for searching and downloading</li>
+				<ul>
+					<li>Geoportals (national, regional, local, sectoral)</li> 
+					<li>Open data portals (also national, regional, local, sectoral)</li>
+					<li>Search engines (Google, Bing, …)</li> 
+					<li>European portals (EEA, INSPIRE, …)</li>
+				</ul>
+				<li>What to look for?</li>
+				<ul>
+					<li>CO2 content in atmosphere?</li> 
+					<li>Sectoral data?</li>
+					<ul>
+						<li>Traffic related data (volume, sales of petrol, air pollutants, …)?</li> 
+						<li>Sectoral policies often include additional objectives, not only CO2 budgets</li>
+					</ul>
+				</ul>
+			</ul> <br>
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Finding data.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Air quality data</h1> 
+			<ul>
+				<li>Directive 2008/50/EC on ambient air quality and cleaner air for Europe</li>
+				<ul>
+					<li>Specify monitoring and reporting obligations related to air quality</li> 
+					<li>What to monitor (SO2, NOx, CO, PM, …), selection of sampling points, thresholds etc.</li>
+					<li>CO2 not included in this directive</li> 
+				</ul>
+				<li>Directive 2004/107/EC relating to arsenic, cadmium, mercury, nickel and polycyclic aromatic hydrocarbons in ambient air</li>
+				<li>Directive (EU) 2016/2284 on the reduction of national emissions of certain atmospheric pollutants</li>
+			</ul> <br>
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Air quality data.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+ 
+		<section class="scrollable">
+			<h1>EEA air pollution map</h1> 
+			<br><img width="1081" height="426" data-src="./resources/L3 - EEA Air Pollution Map.jpg"><br>						
+			<small> <a href="https://www.eea.europa.eu/themes/air/explore-air-pollution-data">Source https://www.eea.europa.eu/themes/air/explore-air-pollution-data</a></small>
+			<br>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Air Pollution Map.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+	
+		<section class="scrollable">
+			<h1>INSPIRE Data</h1> 
+			<br>
+			<ul>
+				<li>Directive 2007/2/EC establishing an infrastructure for spatial information in the European community (INSPIRE)</li>
+				<ul>
+					<li>Aiming to provide interoperable spatial data of Europe</li>
+					<li>Structured into 34 data themes </li>
+				</ul>
+				<li>Air quality data can be found in the following themes</li>
+				<ul>
+					<li>Atmospheric conditions</li>
+					<li>Environmental monitoring facilities</li>
+					<li>Meteorological geographical features</li>
+				</ul>
+			</ul>
+			<br> <br> <small> <a href="https://inspire-geoportal.ec.europa.eu/ ">Geoportal: https://inspire-geoportal.ec.europa.eu/  </a></small>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/INSPIRE data.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>INSPIRE data grouped after reporting obligation</h1> 
+			<br>
+			<br><img width="773" height="439" data-src="./resources/L3 - INSPIRE Geoportal.png"><br>						
+			<br> <br> <p>For Sweden, air quality data according to OGC-SOS is provided</p>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/INSPIRE Geoportal.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+					 		
+		<section class="scrollable">
+			<h1>ICOS Carbon Portal</h1> 
+			<br><img width="350" height="453" data-src="./resources/L3 - ICOS Stations.png"><br>						
+			<br> <br> <small> <a href="https://www.icos-cp.eu/ ">Source https://www.icos-cp.eu/</a></small>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/ICOS Map.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>ICOS measurements Norunda</h1> 
+			<br> <br>
+			<br><img width="698" height="507" data-src="./resources/L3 - Norunda.png"><br>						
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Norunda.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Copernicus Climate Change Service</h1> 
+			<br><img width="788" height="406" data-src="./resources/L3 - Copernicus CCS.png"><br>						
+			<br> <br> <small> <a href="https://climate.copernicus.eu/">https://climate.copernicus.eu/ </a></small>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Copernicus.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>Downloading C3S data</h1> 
+			<br> <br>
+			<ul>
+				<li>Geometric Resolution: TANSO - around 10 km x 10 km</li>
+				<li>Temporal coverage: 2003 – 2019</li>
+				<li>Temporal resolution: According to satellite orbits</li>
+				<li>File format: NetCDF4 (Can be read by QGIS as mesh)</li>
+				<li>Reference system: Lat-Long Grid</li>
+			</ul>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Copernicus characteristics.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>CO2 at Nyköping, 2019-12-01</h1> 
+			<br> <br>
+			<br><img width="824" height="450" data-src="./resources/L3 - CO2 Nyköping.png"><br>						
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/CO2 Nyköping.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>From SDI to business ecosystems</h1> 
+			<br><img width="786" height="591" data-src="./resources/L3 - EU Data Spaces.png"><br>						
+			<br> <small>Source: DG CNECT </small>
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/European Data Spaces.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Forecasting and trends</h1> 
+			<br> <br>
+			<ul>
+				<li>Autoregressive models is a simple way of forecasting, or to be more precise, extrapolation of trends </li>
+				<li>The autoregressive model specifies that the output variable depends linearly on its own previous values and on a stochastic term</li>
+				<li>In this case, we will use a third order AR model for predicting future values</li>
+				<li>We will use different AR models for each sector (agriculture, industry, private cars etc)</li>
+				<li>Each AR model can be replaced by a better forecast, if we have such forecasts available</li>
+			</ul>
+
+			<br><img data-src="./resources/L3 - Forecast.jpg"><br>						
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/AR Nyköping.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>Environmental dashboards</h1> 
+			<br><img data-src="./resources/L3 - Dashboard Nyköping.jpg"><br>						
+
+			<br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L3 - Monitoring/Dashboard.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+				
+		<section>Slide show ends</section>
+
+              </div>
+
+
+		<script src="internal_restricted/v1.0/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './internal_restricted/v1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './internal_restricted/v1.0/plugin/notes/notes.js' },{ src: 'socket.io/socket.io.js', async: true },
+					{ src: './internal_restricted/v1.0/plugin/notes-server/client.js', async: true }
+					
+				]
+			});
+
+		</script>
+		
+		<!-- rauslöschen?? -->
+		<script>Reveal.initialize({
+			simplemenu: {
+				menuselector: '.menu a'
+			},
+			dependencies: [
+				{ src: './internal_restricted/v1.0/plugin/markdown/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false } 
+			]
+			});
+		</script>
+
+	</body>
+</html>

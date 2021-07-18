@@ -1,0 +1,514 @@
+<!-- 	Template Authors: Stefan Lang, Eva Missoni - PLUS 
+		Template Creation Date: March-June 2020 
+		
+		IMPORTANT NOTICES FOR USERS/AUTHORS:  
+		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
+<!--	THE COMMANDS <section> and </section>  EMBRACE THE CONTENT FOR EACH SINGLE SLIDE.
+		ALTERNATIVELY, YOU CAN USE MARKDOWN NOTATION TO CREATE YOUR SLIDES. More information: https://github.com/webpro/reveal-md 
+		-->
+		
+		
+<!doctype html>
+<html lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		 
+		<title>CO2 budgets for municipalities - An introduction</title>
+		
+	<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) -->	
+		<meta property="dc:title" content="CO2 budgets for municipalities - An introduction" />
+		<meta property="dc:creator" content="Anders Östman" /> 
+		<meta property="dc:publisher" content="Novogit AB" /> 
+		<! meta property="dc:subject" content="Copernicus, EO4GEO, WP5, Satellite, Earth Observation" />
+		<! meta property="dc:abstract" content="This is a template slideset for EO4GEO Partners to familiarize with EO4GEO, introducing the idea of Copernicus and its services. Nevertheless, content-generation is not the prime concern of the template" />
+		<! meta property="dc:tableOfContents" content="(1) What is EO?; 
+							     (2) Benefits of Copernicus; 
+							     (3) Integration of Jupyter Notebooks; 
+							     (4) Integration of Youtube Video; 
+							     (5) Integration of H5P; 
+							     (6) Copernicus Services; 
+							     (7) Reference list; />
+		<! meta property="dc:description" content="Learning outcomes: Understand remote sensing workflow including image acquisition, (pixel-based) image analysis, classification and validation; get to know online portals, data catalogues, and pricing schemes for satellite data; Familiarize with the European Copernicus Earth observation programme; Master standard image analysis routines as implemented in ArcGIS Pro" /> 
+		<! meta property="dc:contributor" content="Barbara Hofer" />
+		<! meta property="dc:contributor" content="Eva Missoni" />
+		<! meta property="dc:created" content="2020-06-20" />
+		<meta property="dc:type" content="teaching material" /> 
+		<meta property="dc:format" content="html" />
+		<meta property="dc:language" content="EN" />
+		<! meta property="dc:SizeOrDuration" content="45min" />
+		<meta property="dc:audience" content="urban planners, GIS engineers" />
+		<meta property="dc:educationLevel" content="EQF 3" />
+		<!meta property="dc:source” content="Existing youtube-video on Copernicus Climate Change Service; existing Jupyter Notebook on "Well switching in Bangladesh" />
+		<meta property="dc:rightsHolder" content="Anders Östman" />
+		<meta property="dc:license" content="https://creativecommons.org/licenses/by-sa/4.0/deed.en" />
+
+		<! link rel="dc:relation" href="eo4geo:IP1-3-2" />
+		<! link rel="dc:relation" href="eo4geo:IP1-7" />
+		<! link rel="dc:relation" href="eo4geo:IP1" />	
+		<! link rel="dc:relation" href="eo4geo:IP3-4" />
+		<! link rel="dc:relation" href="eo4geo:IP4-2-1" />
+
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
+		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
+		<link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css">
+		<! link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme">  <!-- anthrazit background design --> 
+		<!-- EO4GEO FONT ROBOTO SLAB -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
+		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
+		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
+
+    		<base target="_blank"> <!-- All links in the presentation are opened in a seperate tab"-->
+ 
+	</head>
+
+	<body>
+		  
+		<div class="reveal" >
+		
+		<!-- FORMATTING FOR HEADER -->
+			
+					
+		<div class = "eo4geologo" style="width: 11%;height : 11%" ></div>				
+		<div class = "partnerlogo" style="width: 15%;height : 6%" ></div>		
+		<div  class = "presentation_title" style=" text-align: center " >Impact Modelling</div>	<!--The title of the presentation appears on each slide-->
+		<div class="slides">
+<!-- 	URL to the image hosting web page: https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets , instead of resources/	---> 				
+			
+		<!-- Impact Modelling --> 
+
+
+		<section class="scrollable">
+			<br><h1>Lecture 2: Impact Modelling</h1> 
+			<h2>Learning objectives</h2> <br> <br>
+			<p>At the end of this lecture, you are expected to be able to</p> <br>
+			<ul>
+				<li style="color:#337acc;">Describe different methods for setting targets</li>
+				<li style="color:#337acc;">Explain some data problems related to impact modelling</li>
+			</ul><br><br>
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Learning Objectives.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>				
+
+		<section class="scrollable">
+			<br><h1>Some usages of Impact Models</h1><br> 
+			<ul>
+				<li>An impact model describes the relationship between actions and their impact</li>
+				<li>It can be used as</li>
+				<ul>
+					<li>An instrument for analysing how the operation works</li>
+					<li>A decision instrument for the development and definition of the vision, mission, goals and strategies</li>
+					<li>A tool for estimating the potential impact of decisions</li>
+					<li>A control instrument for implementing and following up goals and strategies</li>
+				</ul>
+			</ul>
+
+			<br> <br>
+			<small> <a href="https://www.impact.se/en/about-us/our-philosophy/the-impact-model/">Source: https://www.impact.se/en/about-us/our-philosophy/the-impact-model/ </a></small>
+			<br> <br>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Usage of Impact Models.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>				
+
+		<section class="scrollable">
+			<h1>EU actions related to CO2 emissions from vehicles</h1> 
+			<ul>
+				<li>Regulation (EU) 2019/631 setting new CO2 emission standards for cars and vans.</li>
+				<ul>
+					<li>From 1 January 2020, this regulation sets an EU fleet-wide target of 95 g CO2/km for the average emissions of new passenger cars.</li>
+					<li>Reduction of 15% from 2025 and of 37.5% from 2030 (as compared to 2019)</li>
+				</ul> 
+				<li>Regulation (EU) 2019/1242 setting CO2 emission standards for heavy-duty vehicles</li>
+				<li>CO2 labelling of cars</li>
+				<li>The Fuel Quality Directive specify requirements on the greenhouse gas intensity of vehicle fuels</li>
+				<ul>
+					<li>Reduction of the greenhouse gas intensity of transport fuels by a minimum of 6% by 2020.</li>
+				</ul> 
+			</ul>
+			<br> <br>
+			<small> <a href="https://ec.europa.eu/clima/policies/transport/vehicles_en">Source: https://ec.europa.eu/clima/policies/transport/vehicles_en </a></small>
+			<br> <br>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/EU Actions.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>		
+
+
+		<section class="scrollable">
+			<h1>National actions and instruments related to CO2 emissions from vehicles</h1> 
+			<ul>
+				<li>Taxes</li>
+				<ul>
+					<li>Fuels</li>
+					<li>Type of vehicle</li>
+					<li>Differentiation (higher in urban areas, …)</li>
+				</ul> 
+				<li>Pricing of national public transports</li>
+			</ul>
+			<br> <br>
+			<small> <a href="https://trafikverket.ineko.se/Files/sv-SE/11711/RelatedFiles/2016_043_styrmedel_atgarder_minska_utslapp_vaxthusgaser_20160208.pdf ">Source: https://trafikverket.ineko.se/Files/sv-SE/11711/RelatedFiles/2016_043_styrmedel_atgarder_minska_utslapp_vaxthusgaser_20160208.pdf </a></small>
+			<br> <br>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/National Actions.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>		
+
+		<section class="scrollable">
+			<h1>Impact of National and European actions</h1> 
+			<br>
+			<br><img width="462" height="429" data-src="./resources/L2 - Goals domestic transports.png"><br>						
+			<small> <a href="https://www.naturvardsverket.se/klimatmal">Source: https://www.naturvardsverket.se/klimatmal </a></small>
+			<br><br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/EU - National Impact.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Setting targets</h1> 
+			<br> <br>
+			<ul>
+				<li>Committments made in negotiations</li>
+				<li>Similar to others</li>
+				<li>Impact modelling, what is realistic</li>
+			</ul> <br><br>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Setting Targets.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>SMART Paradigm</h1> 
+			<br> <br>
+			<ul>
+				<li>Goals should be</li>
+				<ul>
+					<li>S - Specific</li>
+					<li>M – Measurable</li>
+					<li>A – Attainable</li>
+					<li>R – Relevant</li>
+					<li>T – Timebound</li>
+				</ul>
+				<li>But what is realistic (attainable)?</li>
+			</ul> <br>
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/SMART.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>Potential for additional CO2 reductions (to 2030)</h1> 
+			<br>
+			<br><img width="1002" height="326" data-src="./resources/L2 - CO2 Reduction Potential.jpg"><br>						
+			<small> <a href="https://trafikverket.ineko.se/Files/sv-SE/31397/Ineko.Product.RelatedFiles/2017_162_Klimatpaverkan_fran_hoghastighetsjarnvag_strackorna_Jarna_Goteborg_och_Jonkoping_Lund.pdf">Source: Trafikverket, Report 2017:162 </a></small>
+
+			<br><br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Traffic Potential.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Potential for reducing traffic volume (2018)</h1> 
+			<table style="width:100%">
+				<tr>
+					<th>Area</th>
+					<th>Population</th>
+					<th>CO2 emission cars (tons)</th>
+					<th>Car emission per capita</th>
+				</tr>
+				<tr>
+					<td>Nyköping</td>
+					<td>56 011</td>
+					<td>113 243</td>
+					<td>2.02</td>
+				</tr>
+				<tr>
+					<td>Sörmland (county)</td>
+					<td>294 695</td>
+					<td>361 673</td>
+					<td>1.23</td>
+				</tr>
+				<tr>
+					<td>Sweden</td>
+					<td>10 230 000</td>
+					<td>9 940 709</td>
+					<td>0.97</td>
+				</tr>
+			</table>						
+
+			<br>
+			<br><img width="341" height="331" data-src="./resources/L2 - Emission Mao Nyköping.png"><br>
+			
+			<small> <a href="https://utslappisiffror.naturvardsverket.se/Alla-utslapp-till-luft/">Source: https://utslappisiffror.naturvardsverket.se/Alla-utslapp-till-luft/ </a></small>
+			<br><br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Nyköping potential.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Impact of urban planning measures</h1> 
+			<br><p>CO2PassCars = f(TrafficVolume(ToV), TypeOfFuel(ToV), EnergyEfficiency(ToV))</p>
+			<p>ToV = TypeOfVehicle</p>
+
+			<ul>
+				<li>Data source for main factors</li>
+				<ul>
+					<li>TrafficVolume(ToV) from traffic department</li>
+					<li>TypeOfFuel(ToV) from engine producers and independent verifications </li>
+					<li>EnergyEfficiency(ToV) from engine producers and independent verifications </li>
+					<li>TypeOfVehivles from travel pattern surveys</li>
+				</ul>
+				<li>The city administration can mainly affect the traffic volume</li>
+			</ul> <br>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Urban Planning Impact.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h2>Simple modelling</h2> 
+			<br><img width="740" height="382" data-src="./resources/L2 - Resor med egna fordon.png"><br>						
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Simple Model.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+	
+		<section class="scrollable">
+			<h1>Traffic modelling in a city</h1> 
+			<ul>
+				<li>Most cities use traffic simulation software to forecast the future traffic flows, for instance as a base for decisions about most appropriate traffic solution.</li>
+				<li>Usually, the goals of the proposed traffic solution is to increase the capacity of the traffic system and to improve the accessibility. Its impact on CO2 emissions is not always considered.</li>
+				<li>The simulation software may work at a macro scale, a meso scale or at a micro scale. The micro simulations often aims to evaluate specific detailed solutions, for instance at road junctions. The macro scale or meso scale simulations may be more appropriate for evaluating the traffic system of an entire city. </li>
+			</ul>
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Traffic Modelling.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>Example: Western part of Nyköping </h1> 
+			<br> <br>
+			<ul>
+				<li>New developments in the western part of Nyköping</li>
+				<li>Some traffic flows needs to be improved</li>
+			</ul>
+
+			<br><img width="636" height="406" data-src="./resources/L2 - New Traffic.png"><br>			
+			<small> Source: Ramboll, No 1320045998 </small> <br><br>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Traffic Plan.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+					 		
+		<section class="scrollable">
+			<h1>Using the results of the traffic simulations</h1> 
+			<br>
+			<ul>
+				<li>The output of a traffic analysis at local level is often an excel table showing the difference in traffic volume at different road segments.</li>
+				<li>Our model requires that we know the amount of different types of cars and the length of each road segment.</li>
+			</ul>
+
+			<br><img width="450" height="359" data-src="./resources/L2 - Traffic Excel.png"><br>			
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Traffic Analysis Output.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Using the results of the traffic simulations</h1> 
+			<br>
+			<ul>
+				<li>The difference in traffic volume may also be visualised on a map.</li>
+				<li>This specific map shows only a small part of the proposed new road network</li>
+				<li>By using the length of each road segment, we see that the total volume of traffic will increase by around 17 % by year 2040.</li>
+			</ul>
+
+			<br><img width="590" height="368" data-src="./resources/L2 - Proposed traffic map.png"><br>			
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Traffic Simulation Map.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<br><h1>Second example: Potential of roof mounted solar panels</h1> 
+			<br>
+			<ul>
+				<li>The electricity production depands on the efficiency of the solar panel, the size, orientation and slope of the panel and the exposure of solar energy</li>
+				<li>A rough estimate for Sweden is a potential of 60 kWh per year and m2</li>
+				<li>If we know the total size of the roofs in a municipality, we can estimate its potential for roof-based solar production</li>
+				<li>Some cities have carried detailed laser scanning surveys and made more accurate estimations at individual house level </li>
+			</ul>
+
+			<br><br><img data-src="./resources/L2 - SunPotentialTyresö.JPG"><br>			
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Solar Maps.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<br><h1>Not all data sources are useful</h1> 
+			<br>
+			<ul>
+				<li>This example shows OSM data (Open Street Map) for Tyresö, Sweden</li>
+				<li>OSM ias based on crowdsorced data and focussing on streets</li>
+				<li>In this case, the buidling layer is very incomplete</li>
+				<li>The area of all builidng can easily be calculated using standard GIS tools</li>
+				<li>A total roof area of 1,050,000 m2 would correspond to a potential electricity production of around 63 MWh / year</li>
+			</ul>
+
+			<br><br><img data-src="./resources/L2 - TyresöRoofs.JPG"><br>			
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/OSM.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Data Quality Elements</h1> 
+			<br> <br>
+			<ul>
+				<li>Geometric accuracy</li>
+				<li>Semantic accuracy (thematic, attribute)</li>
+				<li>Completeness (feature, attribute)</li>
+				<li>Accessibility</li>
+			</ul>
+
+			<br><br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/DQ Elements.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+
+		<section class="scrollable">
+			<h1>Overview of some data sources</h1><br> 
+			<table style="width:100%">
+				<tr>
+					<th></th>
+					<th>OSM</th>
+					<th>Urban Map</th>
+					<th>Primary Map</th>
+				</tr>
+				<tr>
+					<td>Geometric Accuracy</td>
+					<td>Good</td>
+					<td>Fair</td>
+					<td>Good</td>
+				</tr>
+				<tr>
+					<td>Semantic Accuracy</td>
+					<td>Good</td>
+					<td>Poor</td>
+					<td>Good</td>
+				</tr>
+				<tr>
+					<td>Completeness</td>
+					<td>Poor</td>
+					<td>Good</td>
+					<td>Good</td>
+				</tr>
+				<tr>
+					<td>Accessibility</td>
+					<td>Good</td>
+					<td>Good</td>
+					<td>Poor</td>
+				</tr>
+			</table>						
+
+			<br><br><audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/DQ Overview.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<section class="scrollable">
+			<h1>Conclusions impact modelling</h1> 
+			<br> <br>
+			<ul>
+				<li>There are sveeral impact models in use today, in various fields</li>
+				<li>Data availability and data quality are crucial issues</li>
+				<li>Open data makes it easier for third parties to develop solutions (impact modelling, data resources, ...)</li>
+				<li>Conflicting goals are common</li>
+			</ul>
+
+			<audio id="player" controls >
+				<source src="https://eo4geo.sbg.ac.at/Novogit/CO2_Budgets/L2 - Impact/Conclusions.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+				
+				
+		<section>Slide show ends</section>
+			
+                </section>
+
+              </div>
+
+
+		<script src="internal_restricted/v1.0/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './internal_restricted/v1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './internal_restricted/v1.0/plugin/notes/notes.js' },{ src: 'socket.io/socket.io.js', async: true },
+					{ src: './internal_restricted/v1.0/plugin/notes-server/client.js', async: true }
+					
+				]
+			});
+
+		</script>
+		
+		<!-- rauslöschen?? -->
+		<script>Reveal.initialize({
+			simplemenu: {
+				menuselector: '.menu a'
+			},
+			dependencies: [
+				{ src: './internal_restricted/v1.0/plugin/markdown/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false } 
+			]
+			});
+		</script>
+
+	</body>
+</html>
